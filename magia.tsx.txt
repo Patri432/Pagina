@@ -4,7 +4,6 @@ import { Cursor } from "@/components/Cursor";
 import { Media } from "@/components/Media";
 import { Sparkles, Mail, Phone } from "lucide-react";
 
-
 const title = "La Maga Pica | Magia en directo";
 const description =
   "La Maga Pica: espectáculos de magia en directo. La Hermana del Medio y PICA. Magia cercana y escénica para eventos, teatros y celebraciones.";
@@ -47,9 +46,9 @@ function MagiaPage() {
         >
           <Link to="/" className="font-display text-sm tracking-tight md:text-base">
             La Maga Pica
-          </Link>        
+          </Link>
 
-		<ul className="flex items-center gap-5">
+          <ul className="flex items-center gap-5">
             {[
               ["SOBRE MÍ", "sobre-mi"],
               ["ESPECTÁCULOS", "espectaculos"],
