@@ -1,0 +1,203 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Reveal } from "@/components/Reveal";
+import { Cursor } from "@/components/Cursor";
+import { Media } from "@/components/Media";
+import { Sparkles, Mail, Phone } from "lucide-react";
+
+const title = "La Maga Pica | Magia en directo";
+const description =
+  "La Maga Pica: espectáculos de magia en directo. La Hermana del Medio y PICA. Magia cercana y escénica para eventos, teatros y celebraciones.";
+
+export const Route = createFileRoute("/magia")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: MagiaPage,
+});
+
+const shows = [
+  {
+    name: "La Hermana del Medio",
+    src: "/images/magia/hermana-del-medio.jpg",
+    text: "Un espectáculo teatral y personal donde la magia se mezcla con la historia de una familia. Humor, cercanía y momentos imposibles.",
+  },
+  {
+    name: "PICA",
+    src: "/images/magia/pica.jpg",
+    text: "Magia directa, gamberra y sorprendente. Un formato dinámico pensado para escenario y para público de todas las edades.",
+  },
+];
+
+function MagiaPage() {
+  return (
+    <>
+      <Cursor />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/85 py-4 backdrop-blur-md">
+        <nav
+          aria-label="Principal"
+          className="mx-auto flex max-w-[1400px] items-center justify-between px-5 md:px-10"
+        >
+          <Link to="/" className="font-display text-sm tracking-tight md:text-base">
+            La Maga Pica
+          </Link>
+          <ul className="flex items-center gap-5">
+            {[
+              ["SOBRE MÍ", "sobre-mi"],
+              ["ESPECTÁCULOS", "espectaculos"],
+              ["CONTACTO", "contacto"],
+            ].map(([label, hash]) => (
+              <li key={hash}>
+                <a
+                  href={`#${hash}`}
+                  className="font-mono text-[10px] tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground md:text-[11px]"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+
+      <main className="pt-24">
+        <section className="mx-auto max-w-[1400px] px-5 pb-20 pt-10 md:px-10 md:pb-32">
+          <Reveal>
+            <p className="eyebrow flex items-center gap-2">
+              <Sparkles className="h-3.5 w-3.5" /> MAGIA EN DIRECTO
+            </p>
+            <h1 className="display mt-4 text-[19vw] leading-[0.82] md:text-[12vw]">
+              La Maga Pica
+            </h1>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed md:text-xl">
+              Magia cercana y escénica para teatros, eventos y celebraciones. Lo imposible, contado
+              con humor y verdad.
+            </p>
+          </Reveal>
+        </section>
+
+        <section
+          id="sobre-mi"
+          className="mx-auto max-w-[1400px] scroll-mt-24 px-5 py-20 md:px-10 md:py-28"
+        >
+          <div className="grid gap-12 border-t border-border pt-10 md:grid-cols-12">
+            <Reveal className="md:col-span-4">
+              <p className="eyebrow">01</p>
+              <h2 className="display mt-4 text-[12vw] leading-[0.85] md:text-[4.5vw]">Sobre mí</h2>
+            </Reveal>
+            <Reveal className="md:col-span-5" delay={80}>
+              <p className="text-lg leading-relaxed">
+                Soy Patricia Martín, y sobre el escenario, La Maga Pica. Llevo años dedicándome a la
+                magia en directo, combinando el juego, la narración y la sorpresa para crear
+                espectáculos que se recuerdan.
+              </p>
+              <p className="mt-6 leading-relaxed text-muted-foreground">
+                Trabajo tanto en formato cercano, rodeada de público a pocos centímetros, como en
+                escena, con propuestas teatrales donde la magia sirve para contar algo más.
+              </p>
+            </Reveal>
+            <Reveal className="md:col-span-3" delay={140}>
+              <Media
+                src="/images/magia/retrato.jpg"
+                alt="Retrato de La Maga Pica"
+                className="aspect-[3/4]"
+                note="/public/images/magia/retrato.jpg"
+              />
+            </Reveal>
+          </div>
+        </section>
+
+        <section
+          id="espectaculos"
+          className="mx-auto max-w-[1400px] scroll-mt-24 px-5 py-20 md:px-10 md:py-28"
+        >
+          <Reveal className="border-t border-border pt-10">
+            <p className="eyebrow">02</p>
+            <h2 className="display mt-4 text-[12vw] leading-[0.85] md:text-[4.5vw]">
+              Espectáculos
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid gap-12 md:grid-cols-2">
+            {shows.map((s, i) => (
+              <Reveal key={s.name} delay={80 + i * 80}>
+                <Media
+                  src={s.src}
+                  alt={s.name}
+                  className="aspect-[4/3]"
+                  note={`/public${s.src}`}
+                />
+                <h3 className="font-display mt-6 text-2xl uppercase tracking-tight md:text-3xl">
+                  {s.name}
+                </h3>
+                <p className="mt-3 max-w-md leading-relaxed text-muted-foreground">{s.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="contacto"
+          className="mx-auto max-w-[1400px] scroll-mt-24 px-5 py-20 md:px-10 md:py-32"
+        >
+          <Reveal className="border-t border-border pt-10">
+            <p className="eyebrow">03</p>
+            <h2 className="display mt-4 text-[16vw] leading-[0.82] md:text-[9vw]">Contacto</h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-10 md:grid-cols-12">
+            <Reveal className="md:col-span-5" delay={80}>
+              <p className="text-lg leading-relaxed md:text-xl">
+                ¿Quieres llevar la magia a tu evento, teatro o celebración? Escríbeme y hablamos.
+              </p>
+            </Reveal>
+            <Reveal className="md:col-span-4 md:col-start-8" delay={140}>
+              <address className="not-italic">
+                <p className="font-display text-xl uppercase tracking-tight">La Maga Pica</p>
+                <a
+                  href="tel:+34628243657"
+                  className="mt-4 flex items-center gap-2 text-base transition-colors hover:text-accent"
+                >
+                  <Phone className="h-4 w-4" /> 628 243 657
+                </a>
+                <a
+                  href="mailto:lamagapica@gmail.com"
+                  className="mt-2 flex items-center gap-2 break-all text-base transition-colors hover:text-accent"
+                >
+                  <Mail className="h-4 w-4" /> lamagapica@gmail.com
+                </a>
+              </address>
+              <a
+                href="mailto:lamagapica@gmail.com"
+                className="mt-8 inline-block border border-foreground px-6 py-3 font-mono text-[11px] tracking-[0.2em] transition-colors duration-300 hover:bg-foreground hover:text-background"
+              >
+                ESCRIBIR
+              </a>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-5 py-10 md:flex-row md:items-center md:justify-between md:px-10">
+          <p className="font-display text-xl uppercase tracking-tight">La Maga Pica</p>
+          <Link
+            to="/portfolio"
+            className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+          >
+            VER PORTFOLIO 3D →
+          </Link>
+          <p className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground">
+            © 2026 Patricia Martín
+          </p>
+        </div>
+      </footer>
+    </>
+  );
+}
