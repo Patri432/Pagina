@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio de Patricia Martín y La Maga Pica">
+  <title>Patricia Martín · La Maga Pica</title>
+  <link rel="icon" href="assets/logo-pica.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== SELECTOR ===================== -->
+<main id="selector" class="selector">
+  <section class="world world-patricia">
+    <div class="world-content">
+      <p class="kicker">DISEÑO 3D · ANIMACIÓN</p>
+      <h1>Patricia<br><i>Martín</i></h1>
+      <p>Modelado · Texturizado · Iluminación · Animación</p>
+      <button class="enter" data-open="patricia">Entrar en mi portfolio <span>↗</span></button>
+    </div>
+  </section>
+
+  <div class="tear" aria-hidden="true"></div>
+
+  <section class="world world-pica">
+    <div class="world-content">
+      <img src="assets/logo-pica.png" class="cover-logo" alt="La Maga Pica">
+      <p class="kicker">MAGIA · HUMOR · ESPECTÁCULO</p>
+      <h2>La Maga Pica</h2>
+      <p>Un mundo donde lo imposible encuentra su lugar.</p>
+      <div class="pica-years"><strong>10+</strong><span>años de<br>experiencia</span></div>
+      <button class="enter" data-open="pica">Entrar en La Maga Pica <span>↗</span></button>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== PATRICIA ===================== -->
+<section id="patricia" class="app app-patricia" hidden>
+  <header class="topbar">
+    <button class="brand" data-back>Patricia <i>Martín</i></button>
+    <nav class="tabs" aria-label="Portfolio Patricia">
+      <button class="tab active" data-tab="p-inicio">Inicio</button>
+      <button class="tab" data-tab="p-servicios">Servicios</button>
+      <button class="tab" data-tab="p-habilidades">Habilidades</button>
+      <button class="tab" data-tab="p-experiencia">Educación &amp; Experiencia</button>
+      <button class="tab" data-tab="p-trabajos">Trabajos</button>
+      <button class="tab" data-tab="p-contacto">Contacto</button>
+    </nav>
+    <button class="switch" data-open="pica">La Maga Pica ↗</button>
+  </header>
+
+  <div class="tab-pages">
+    <article id="p-inicio" class="page active">
+      <div class="page-hero">
+        <p class="kicker">PORTFOLIO DE DISEÑO 3D</p>
+        <h1>Creo, modelo<br><i>y doy vida.</i></h1>
+        <p class="lead">Diseñadora 3D especializada en modelado, texturizado, iluminación y animación.</p>
+        <button class="cta" data-tab-go="p-trabajos">Ver trabajos ↓</button>
+      </div>
+      <div class="intro-grid">
+        <div><span class="label">01 / PERFIL</span></div>
+        <div>
+          <h2>Diseño mundos,<br><i>objeto a objeto.</i></h2>
+          <p>Mi trabajo combina construcción de modelos 3D, detalle visual y puesta en escena. Me interesa crear piezas y entornos con una imagen cuidada, funcional y fiel al proyecto.</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="p-servicios" class="page">
+      <div class="heading"><span class="label">02 / SERVICIOS</span><h2>Lo que<br><i>hago.</i></h2></div>
+      <div class="cards three">
+        <div class="card"><b>01</b><h3>Modelado 3D</h3><p>Modelado de productos y entornos con topología optimizada y fidelidad visual.</p></div>
+        <div class="card"><b>02</b><h3>Texturizado e iluminación</h3><p>Texturizado PBR, acabados realistas y preparación de escenas para renderizado.</p></div>
+        <div class="card"><b>03</b><h3>Animación 3D</h3><p>Creación de movimiento y puesta en escena para dar vida a modelos y proyectos.</p></div>
+      </div>
+    </article>
+
+    <article id="p-habilidades" class="page">
+      <div class="heading"><span class="label">03 / HABILIDADES</span><h2>Herramientas<br><i>para construir.</i></h2></div>
+      <div class="skills-wrap">
+        <div class="skill-group"><h3>Habilidades</h3><div class="chips">
+          <span>Modelado 3D</span><span>Texturizado</span><span>Iluminación</span><span>Animación</span>
+        </div></div>
+        <div class="skill-group"><h3>Programas</h3><div class="chips">
+          <span>Autodesk Maya</span><span>Blender</span><span>Lumion</span><span>AutoCAD</span><span>Inventor</span><span>KeyShot</span>
+        </div></div>
+      </div>
+    </article>
+
+    <article id="p-experiencia" class="page">
+      <div class="heading"><span class="label">04 / EDUCACIÓN &amp; EXPERIENCIA</span><h2>Formación,<br><i>experiencia y premios.</i></h2></div>
+      <div class="timeline">
+        <div><time>2023—2025</time><section><h3>Grado Superior de Animación 3D</h3><p>Formación Profesional Superior.</p></section></div>
+        <div><time>2023—2025</time><section><h3>Prácticas en Render Estudio 3D</h3><p>Prácticas de diseñadora 3D en empresa.</p></section></div>
+        <div><time>2025</time><section><h3>Primer premio en RiojaSkills</h3><p>Primer premio en la modalidad de animación 3D.</p></section></div>
+        <div><time>2026</time><section><h3>SpainSkills</h3><p>Representando a La Rioja en febrero de 2026.</p></section></div>
+        <div><time>2025</time><section><h3>Ascender</h3><p>Modelado 3D de butacas.</p></section></div>
+        <div><time>PROYECTO</time><section><h3>Ruinas romanas de Varea</h3><p>Recreación en 3D de las ruinas romanas que yacen bajo el colegio de Varea, integrada en un vídeo documental.</p></section></div>
+        <div><time>PREMIO</time><section><h3>Corto de animación 3D en La Gota de Leche</h3><p>Proyecto reconocido en La Gota de Leche.</p></section></div>
+      </div>
+    </article>
+
+    <article id="p-trabajos" class="page">
+      <div class="heading work-heading"><div><span class="label">05 / TRABAJOS DE DISEÑO 3D</span><h2>Environment<br><i>&amp; Props.</i></h2></div><p>Trabajos realizados durante las prácticas en <strong>Render Estudio 3D</strong>, organizados por tipo de trabajo.</p></div>
+      <div class="subtabs">
+        <button class="subtab active" data-work="environment">Environment</button>
+        <button class="subtab" data-work="props">Props</button>
+      </div>
+      <div class="projects" data-projects="environment">
+        <figure><img src="assets/environment/edificio.webp" alt="Edificio residencial"><figcaption><small>ENVIRONMENT / 01</small><h3>Edificio residencial</h3></figcaption></figure>
+        <figure><img src="assets/environment/parque.png" alt="Parque"><figcaption><small>ENVIRONMENT / 02</small><h3>Parque y espacio exterior</h3></figcaption></figure>
+      </div>
+      <div class="projects" data-projects="props" hidden>
+        <figure><img src="assets/props/cocina-01.png" alt="Cocina y mobiliario"><figcaption><small>PROPS / 01</small><h3>Cocina y mobiliario</h3></figcaption></figure>
+        <figure><img src="assets/props/cocina-02.png" alt="Cajón y cubertería"><figcaption><small>PROPS / 02</small><h3>Cajón y cubertería</h3></figcaption></figure>
+        <figure><img src="assets/props/farola.png" alt="Farola urbana"><figcaption><small>PROPS / 03</small><h3>Farola urbana</h3></figcaption></figure>
+        <figure><img src="assets/props/fuente.webp" alt="Fuente urbana"><figcaption><small>PROPS / 04</small><h3>Fuente urbana</h3></figcaption></figure>
+      </div>
+    </article>
+
+    <article id="p-contacto" class="page">
+      <div class="contact-page"><span class="label">06 / CONTACTO</span><h2>¿Hablamos?</h2><p>Si quieres conocer más sobre mi trabajo o plantear un proyecto, puedes contactar conmigo.</p><a href="mailto:patriciaanimacion3d@gmail.com">patriciaanimacion3d@gmail.com ↗</a><a href="tel:+34628243657">628 243 657</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== PICA ===================== -->
+<section id="pica" class="app app-pica" hidden>
+  <header class="topbar pica-topbar">
+    <button class="brand pica-brand" data-back><img src="assets/logo-pica.png" alt=""> La Maga <i>Pica</i></button>
+    <nav class="tabs">
+      <button class="tab active" data-tab="m-inicio">Inicio</button>
+      <button class="tab" data-tab="m-sobre">Sobre mí</button>
+      <button class="tab" data-tab="m-espectaculos">Espectáculos</button>
+      <button class="tab" data-tab="m-contacto">Contacto</button>
+    </nav>
+    <button class="switch" data-open="patricia">Patricia Martín ↗</button>
+  </header>
+
+  <div class="tab-pages">
+    <article id="m-inicio" class="page active pica-page">
+      <div class="pica-main">
+        <img src="assets/logo-pica.png" alt="La Maga Pica" class="pica-big-logo">
+        <span class="label">MAGIA · HUMOR · ESPECTÁCULO</span>
+        <h1>La Maga <i>Pica</i></h1>
+        <div class="big-years"><strong>10+</strong><span>años de experiencia</span></div>
+        <p>Magia cercana, humor y espectáculos pensados para sorprender y hacer participar.</p>
+        <button class="magic-cta" data-tab-go="m-espectaculos">Descubrir espectáculos ↘</button>
+      </div>
+    </article>
+
+    <article id="m-sobre" class="page pica-page">
+      <div class="pica-copy"><span class="label">01 / SOBRE MÍ</span><h2>Detrás del truco<br><i>hay una historia.</i></h2>
+      <p>La Maga Pica nace de la mezcla entre curiosidad, humor y ganas de convertir lo cotidiano en algo inesperado. Lleva más de 10 años acercando la magia a públicos diferentes, buscando que cada persona no solo vea el truco, sino que forme parte de él.</p>
+      <p>Su estilo apuesta por una magia cercana, divertida y con personalidad: sorprender, jugar con las expectativas y conseguir que durante unos minutos todo parezca posible.</p></div>
+    </article>
+
+    <article id="m-espectaculos" class="page pica-page">
+      <div class="heading"><span class="label">02 / ESPECTÁCULOS</span><h2>Dos formas<br><i>de hacer magia.</i></h2></div>
+      <div class="cards two magic-cards">
+        <div class="magic-card"><span>01</span><h3>La Hermana del Medio</h3><p>Un espectáculo con humor, personalidad y magia en el que nada es exactamente lo que parece.</p><button>Más información ↗</button></div>
+        <div class="magic-card"><span>02</span><h3>PICA</h3><p>Una propuesta de magia dinámica y cercana pensada para sorprender, jugar y conectar con el público.</p><button>Más información ↗</button></div>
+      </div>
+    </article>
+
+    <article id="m-contacto" class="page pica-page">
+      <div class="contact-page"><span class="label">03 / CONTACTO</span><h2>¿Hacemos magia?</h2><p>Para contrataciones, información sobre espectáculos o cualquier consulta:</p><a href="mailto:lamagapica@gmail.com">lamagapica@gmail.com ↗</a><a href="tel:+34628243657">628 243 657</a></div>
+    </article>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
